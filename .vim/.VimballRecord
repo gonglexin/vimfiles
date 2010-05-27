@@ -1,0 +1,1 @@
+fontsize-0.2.0.vba: call delete('/Users/gonglexin/.vim/plugin/fontsize.vim')|call delete('/Users/gonglexin/.vim/autoload/fontsize.vim')|call delete('/Users/gonglexin/.vim/doc/fontsize.txt')
