@@ -1,3 +1,4 @@
+call pathogen#runtime_append_all_bundles()
 " 设置coloscheme
 colorscheme twilight2 
 " 显示游标行列状态 set ru
