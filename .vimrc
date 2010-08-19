@@ -1,3 +1,4 @@
+" 加载pathogen管理的插件
 call pathogen#runtime_append_all_bundles()
 " 设置coloscheme
 colorscheme twilight2 
