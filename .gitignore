@@ -1,6 +1,8 @@
 /*
 !.gitignore
+!.gitmodules
 /.vim/.netrwhist
 /.vim/.DS_Store
 !.vimrc
+!.gvimrc
 !/.vim
