@@ -4,3 +4,6 @@
 [submodule ".vim/bundle/Command-T"]
 	path = .vim/bundle/Command-T
 	url = git://github.com/wincent/Command-T.git
+[submodule "/Users/gonglexin/.vim/bundle/snipmate"]
+	path = /Users/gonglexin/.vim/bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
