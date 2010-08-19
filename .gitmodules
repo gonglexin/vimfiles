@@ -19,3 +19,9 @@
 [submodule ".vim/bundle/vim-ruby"]
 	path = .vim/bundle/vim-ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule ".vim/bundle/vividchalk"]
+	path = .vim/bundle/vividchalk
+	url = http://github.com/tpope/vim-vividchalk.git
+[submodule ".vim/bundle/supertab"]
+	path = .vim/bundle/supertab
+	url = git://github.com/ervandew/supertab.git
