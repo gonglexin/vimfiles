@@ -1,21 +1,25 @@
-" 加载pathogen管理的插件
+"======================================
+"
+" Base Settings
+"
+"======================================
+
 call pathogen#runtime_append_all_bundles()
-" 设置coloscheme
-colorscheme twilight2 
+set nocompatible
+set cursorline
+colorscheme cloudsMidnight 
 " 显示游标行列状态 set ru
 set ruler
 " 禁止自动换行
 set nowrap
 " 设置缩进
 set ts=2
-" 不生成备件文件
 set nobackup
-" 不生成swap文件
 set noswapfile
-" 搜索高亮
 set hlsearch
 " 启动时不显示援助索马里儿童提示
 set shortmess=atI
+set nu
 
 " 隐藏右边滚动条 
 set guioptions-=R
@@ -28,7 +32,35 @@ set guioptions-=L
 " 隐藏工具栏
 set guioptions-=T
 
-" FuzzyFinder设置
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
+" Invisible character colors
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
+
+" 指定 jsLint 调用路径
+let g:jslint_command = '~/bin/jsl'
+
+
+"======================================
+"
+" Map Keys
+"
+"======================================
+inoremap jj <ESC>
+nmap ,s :source ~/.vimrc<CR>
+nmap ,e :e ~/.vimrc<CR>
+nmap <D-i> :set list!<CR>
+
+
+"======================================
+"
+" Plugin Settings
+"
+"======================================
+
+" FuzzyFinder
 let g:fuf_modesDisable = []
 let g:fuf_abbrevMap = {
 \   '^vr:' : map(filter(split(&runtimepath, ','), 'v:val !~ "after$"'), 'v:val . ''/**/'''),
@@ -60,26 +92,20 @@ vnoremap <silent> <C-f><C-b> :FufAddBookmarkAsSelectedText<CR>
 nnoremap <silent> <C-f><C-e> :FufEditInfo<CR>
 nnoremap <silent> <C-f><C-r> :FufRenewCache<CR>
 
-" NERDTree插件的快捷键
-imap <silent> <F7> <esc>:NERDTreeToggle<CR>
-nmap <silent> <F7> :NERDTreeToggle<CR>
+" NERD Tree
+imap <silent> <F2> <esc>:NERDTreeToggle<CR>
+nmap <silent> <F2> :NERDTreeToggle<CR>
 
-" 指定 jsLint 调用路径
-let g:jslint_command = '~/bin/jsl'
-
-" Calendar插件快捷键 
+" Calendar
 map ca :Calendar<cr>
 
-" 在normal模式下，先后按下 ,s 两个键执行_vimrc，而 ,e 则是编辑_vimrc
-nmap ,s :source ~/.vimrc<CR>
-nmap ,e :e ~/.vimrc<CR>
 
-" Toggle Invisibles Shortcut to rapidly toggle `set list`
-" nmap <leader>l :set list!<CR>
-nmap <D-i> :set list!<CR>
-" Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
-" Invisible character colors
-highlight NonText guifg=#4a4a59
-highlight SpecialKey guifg=#4a4a59
+"======================================
+"
+"  GUI Settings
+"
+"======================================
 
+if has('gui_running')
+	set colorcolumn=85
+endif
