@@ -6,7 +6,7 @@
 
 if has("gui_macvim")
 	" PeepOpen快捷键
-  macmenu &File.New\ Tab key=<nop>
-  map <D-t> <Plug>PeepOpen
+	macmenu &File.New\ Tab key=<nop>
+	map <D-t> <Plug>PeepOpen
 end
 
